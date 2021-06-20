@@ -10,7 +10,7 @@ form.addEventListener("submit", function(e){
 
 let LI=document.createElement("li");
 let B=document.createElement("button")
-B.setAttribute("class","buttondone")
+B.setAttribute("class","buttondone");
 LI.innerHTML+=newtask.value;
 B.innerHTML="Done";
 u.appendChild(LI);
