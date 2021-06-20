@@ -1,18 +1,24 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // your code here
+let newtask=document.getElementById('new-task-description');
+let u=document.getElementById('tasks');
 
-  let taskForm = document.getElementById("create-task-form");
-  
-    taskForm.addEventListener('submit', function (e){
-     e.preventDefault()
-     let inputTask = document.getElementById("new-task-description").value;
-  
-     let li = document.createElement("li");
-     let text = document.createTextNode(inputTask);
-  
-     li.appendChild(text);
-     tasks.appendChild(li);
-  
-    })
-  
-  });
+
+let b =document.getElementById('button');
+let form=document.getElementById('create-task-form')
+form.addEventListener("submit", function(e){
+  e.preventDefault();
+
+let LI=document.createElement("li");
+let B=document.createElement("button")
+B.setAttribute("class","buttondone")
+LI.innerHTML+=newtask.value;
+B.innerHTML="Done";
+u.appendChild(LI);
+LI.appendChild(B);
+newtask.value="";
+console.log("DONE");
+B.addEventListener("click", function(e){
+  e.preventDefault();
+  LI.remove();
+});
+});});
