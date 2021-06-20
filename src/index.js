@@ -9,7 +9,7 @@ let ul = document.getElementById("tasks");
 ul.style.padding = "0"
 let input = document.getElementById("new-task-description");
 let btn = document.querySelector(".submit-btn");
-let counterForId = 0; 
+let counterForId = 0;
 
 const handleButtonClick = (e) => {
   let x = document.getElementById(e.target.parentElement.id)
